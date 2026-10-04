@@ -7,10 +7,12 @@ import Footer from "./componets/Footer";
 
 export default function RootLayout({ children }) {
   return (
-    <html>
-      <Navbar /> 
-      <body>{children}</body>
-      <Footer />
+    <html lang="en">
+      <body>
+        <Navbar /> 
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
