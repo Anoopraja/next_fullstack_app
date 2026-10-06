@@ -3,8 +3,7 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: [true, "Please provide a username"],
-        unique: true,
+        required: [true, "Please provide a username"]
     },
     email: {
         type: String,
@@ -26,6 +25,5 @@ const userSchema = new mongoose.Schema({
     },
 }, { timestamps: true });
 
-const User = mongoose.model("User", userSchema);
-
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 export default User;
